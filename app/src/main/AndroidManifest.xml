@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sirangwoolheater.parkme">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,8 +22,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity
+            android:name=".ParkingLotItem"
+            android:label="@string/title_activity_parking_lot_item"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sirangwoolheater.parkme.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ParkingLotItemFav"
+            android:label="@string/title_activity_parking_lot_item"
+            android:parentActivityName=".FavoriteActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sirangwoolheater.parkme.FavoriteActivity" />
+        </activity>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDMU2zYH3GWeKwQRaDJ0kYFtuDdXGbAMl4" />
+
+        <activity
+            android:name=".FavoriteActivity"
+            android:label="@string/title_activity_favorite"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sirangwoolheater.parkme.MainActivity" />
+        </activity>
+    </application>
 
 </manifest>

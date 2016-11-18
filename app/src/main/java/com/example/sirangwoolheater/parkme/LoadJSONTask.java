@@ -84,7 +84,7 @@ public class LoadJSONTask extends AsyncTask<String, Void, Response> {
         //nResponse = nResponse.replaceFirst(".*(?=\"results)", "{");
         //nResponse = nResponse.replace("results", "android");
 
-        System.out.println(nResponse);
+        //System.out.println(nResponse);
 
         in.close();
         return nResponse;

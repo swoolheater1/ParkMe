@@ -6,7 +6,8 @@ android {
     defaultConfig {
         applicationId "com.example.sirangwoolheater.parkme"
         minSdkVersion 17
-        targetSdkVersion 24
+        targetSdkVersion 22
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -29,4 +30,6 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'com.google.code.gson:gson-parent:2.8.0'
     compile 'com.google.code.gson:gson:2.2.+'
+    compile 'com.android.support:multidex:+'
+    compile 'com.google.android.gms:play-services:9.6.0'
 }
